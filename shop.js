@@ -38,7 +38,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		 li.innerHTML = dataobject[i].Project + " " + dataobject[i].Antal + " : " + dataobject[i].färje;
 		 
 		// För att få data att hamna längst up
-		showData.insertBefore(li, chatMe.firstChild);
+		//showData.insertBefore(li, chatMe.firstChild);
 		 
 	 }
 		
