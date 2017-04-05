@@ -176,7 +176,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	btnVisa.addEventListener('click',function(event){ 
            
             show.innerHTML=""; 
-		    
+		    show.innerHTML = "";
             
 		    let db = firebase.database();   
             let limit= Number(limitFirst.value);  
@@ -187,7 +187,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
                 snapshot.forEach( inputInformation=>  {
                   console.log(inputInformation.val());
                     let li= document.createElement('li');
-                    li.innerHTML= `From: ${ inputInformation.val().Produkt } Message:${inputInformation.val().Antal} At: ${inputInformation.val().Färg};  pris:${inputInformation.val().Pris}`
+                    li.innerHTML= `Produkt: ${ inputInformation.val().Produkt } Antal:${inputInformation.val().Antal} Färg: ${inputInformation.val().Färg}  pris:${inputInformation.val().Pris}`;
                      show.appendChild(li);
                       
 				}) //snapshot 
