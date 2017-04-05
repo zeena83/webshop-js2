@@ -35,7 +35,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	 for(let i in dataobject){
 		 let li = document.createElement('li');
 		 console.log('data', dataobject[i]);
-		 li.innerHTML = dataobject[i].Project + " " + dataobject[i].Antal + " : " + dataobject[i].färje;
+		 li.innerHTML = dataobject[i].Project + " ," + dataobject[i].Antal + " , " + dataobject[i].färje;
 		
 		 //
 		 show.insertBefore(li,show.firstChild);
