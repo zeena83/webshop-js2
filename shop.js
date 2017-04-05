@@ -87,8 +87,8 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	// sortering efter produkts antal
 	
 	btnsortAntal.addEventListener('click', function(){	
-	    //show.style.display ='none';
-	    //showshow.style.display = 'inline';
+	    show.style.display ='none';
+	    showshow.style.display = 'inline';
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Antal').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
@@ -113,8 +113,8 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	// sortering efter produkts färg
 	
 	btnsortFärg.addEventListener('click', function(){	
-	    //show.style.display ='none';
-	    //showshow.style.display = 'inline';
+	    show.style.display ='none';
+	    showshow.style.display = 'inline';
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Färg').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
@@ -137,8 +137,8 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	// sortering efter produkts pris
 	
 	btnsortPris.addEventListener('click', function(){	
-	    //show.style.display ='none';
-	    //showshow.style.display = 'inline';
+	    show.style.display ='none';
+	    showshow.style.display = 'inline';
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Pris').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
