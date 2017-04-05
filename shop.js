@@ -14,9 +14,19 @@ let btnsortNamn = document.getElementById('sort1');
 let btnsortAntal = document.getElementById('sort2');
 let btnsortFärg = document.getElementById('sort3');
 let btnsortPris = document.getElementById('sort4');
+let limitFirst = document.getElementById('ex2');
+let btnVisa = document.getElementById('visa');
 
 
-	btnAdd.addEventListener('click', function(){
+
+
+
+
+
+
+//add
+
+btnAdd.addEventListener('click', function(){
 		show.innerHTML ="";
 		firebase.database().ref('inputInformation/').push({
 			Produkt: inputObject1.value,
@@ -161,8 +171,32 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		
 	
 	
-	
+	//limittofrist
 
+	btnVisa.addEventListener('click',function(event){ 
+           
+            show.innerHTML=""; 
+		    
+            
+		    let db = firebase.database();   
+            let limit= Number(limitFirst.value);  
+              //console.log(typeof userrequest);
+             
+            db.ref('inputInformation/').limitToFirst(limit).once('value',function(snapshot) {
+               // snapshot.val();  // VARNING! Behåller inte sorteringen
+                snapshot.forEach( inputInformation=>  {
+                  console.log(inputInformation.val());
+                    let li= document.createElement('li');
+                    li.innerHTML= `From: ${ inputInformation.val().Produkt } Message:${inputInformation.val().Antal} At: ${inputInformation.val().Färg};  pris:${inputInformation.val().Pris}`
+                     show.appendChild(li);
+                      
+				}) //snapshot 
+                   
+                    
+                });// db.ref 
+                
+         
+               }); //limitlist event
 	
 	
 	
@@ -177,7 +211,6 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	
 	
 	
-	
-});
+});   //load
 
 
