@@ -61,7 +61,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 // sortering efter produkts namn
 	
 	btnsortNamn.addEventListener('click', function(){	
-	
+	  show.innerHTML ="";
 	    let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Produkt').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
