@@ -6,6 +6,7 @@ window.addEventListener('load', function(){
 let inputObject1 = document.getElementById('input1');
 let inputObject2 = document.getElementById('input2');
 let inputObject3 = document.getElementById('input3');
+let inputObject4 = document.getElementById('input4');
 let btnAdd = document.getElementById('add');
 let showData = document.getElementById('show');
 
@@ -14,9 +15,10 @@ let showData = document.getElementById('show');
 	btnAdd.addEventListener('click', function(){
 		show.innerHTML ="";
 		firebase.database().ref('inputInformation/').push({
-			Project: inputObject1.value,
+			Produkt: inputObject1.value,
 			Antal: inputObject2.value,
-			färje:inputObject3.value
+			Färg:inputObject3.value,
+			Pris:inputObject4.value
 			
 
 		})
@@ -35,7 +37,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	 for(let i in dataobject){
 		 let li = document.createElement('li');
 		 console.log('data', dataobject[i]);
-		 li.innerHTML = dataobject[i].Project + " ," + dataobject[i].Antal + " , " + dataobject[i].färje;
+		 li.innerHTML = dataobject[i].Produkt + " ," + dataobject[i].Antal + " , " + dataobject[i].Färg + " , " + dataobject[i].Pris;
 		
 		 //
 		 show.insertBefore(li,show.firstChild);
