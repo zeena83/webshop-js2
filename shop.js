@@ -9,7 +9,7 @@ let inputObject3 = document.getElementById('input3');
 let inputObject4 = document.getElementById('input4');
 let btnAdd = document.getElementById('add');
 let showData = document.getElementById('show');
-//let showDataShow = document.getElementById('showshow');
+let showDataShow = document.getElementById('showshow');
 let btnsortNamn = document.getElementById('sort1');
 let btnsortAntal = document.getElementById('sort2');
 let btnsortFärg = document.getElementById('sort3');
@@ -62,8 +62,8 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 // sortering efter produkts namn
 	
 	btnsortNamn.addEventListener('click', function(){	
-	    //show.style.display ='none';
-	    //showshow.style.display = 'inline';
+	    show.style.display ='none';
+	    showshow.style.display = 'inline';
 		
 		show.innerHTML ="";
 	      let db = firebase.database();
@@ -78,7 +78,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		
 		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
-		           show.appendChild(li);
+		           showshow.appendChild(li);
 	           })
 		 });
 	});	
