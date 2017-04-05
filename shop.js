@@ -86,7 +86,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	
 	// sortering efter produkts antal
 	
-	btnsortNamn.addEventListener('click', function(){	
+	btnsortAntal.addEventListener('click', function(){	
 	    //show.style.display ='none';
 	    //showshow.style.display = 'inline';
 	      let db = firebase.database();
@@ -112,7 +112,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	
 	// sortering efter produkts färg
 	
-	btnsortNamn.addEventListener('click', function(){	
+	btnsortFärg.addEventListener('click', function(){	
 	    //show.style.display ='none';
 	    //showshow.style.display = 'inline';
 	      let db = firebase.database();
@@ -136,7 +136,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	
 	// sortering efter produkts pris
 	
-	btnsortNamn.addEventListener('click', function(){	
+	btnsortPris.addEventListener('click', function(){	
 	    //show.style.display ='none';
 	    //showshow.style.display = 'inline';
 	      let db = firebase.database();
