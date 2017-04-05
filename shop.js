@@ -64,8 +64,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	btnsortNamn.addEventListener('click', function(){	
 	    show.style.display ='none';
 	    showshow.style.display = 'inline';
-		
-		show.innerHTML ="";
+	
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Produkt').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
@@ -102,7 +101,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		
 		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
-		           show.appendChild(li);
+		           showshow.appendChild(li);
 	           })
 		 });
 	});	
@@ -128,7 +127,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		
 		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
-		           show.appendChild(li);
+		           showshow.appendChild(li);
 	           })
 		 });
 	});	
@@ -152,7 +151,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		
 		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
-		           show.appendChild(li);
+		           showshow.appendChild(li);
 	           })
 		 });
 	});	
