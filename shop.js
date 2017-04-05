@@ -89,6 +89,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	btnsortAntal.addEventListener('click', function(){	
 	    show.style.display ='none';
 	    showshow.style.display = 'inline';
+		showshow.innerHTML ="";
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Antal').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
@@ -138,7 +139,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	
 	btnsortPris.addEventListener('click', function(){	
 	    show.style.display ='none';
-	    showshow.style.display = 'inline';
+	    it showshow.style.display = 'inline';
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Pris').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
