@@ -12,7 +12,7 @@ let showData = document.getElementById('show');
 
 
 	btnAdd.addEventListener('click', function(){
-	
+	     show.innerHTML = "";
 		firebase.database().ref('inputInformation/').push({
 			Project: inputObject1.value,
 			Antal: inputObject2.value,
@@ -38,7 +38,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		 li.innerHTML = dataobject[i].Project + " " + dataobject[i].Antal + " : " + dataobject[i].färje;
 		 
 		// För att få data att hamna längst up
-		 show.insertBefore(li, chatMe.firstChild);
+		show.insertBefore(li, chatMe.firstChild);
 		 
 	 }
 		
