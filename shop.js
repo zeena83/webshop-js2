@@ -9,7 +9,10 @@ let inputObject3 = document.getElementById('input3');
 let inputObject4 = document.getElementById('input4');
 let btnAdd = document.getElementById('add');
 let showData = document.getElementById('show');
-
+let btnsortNamn = document.getElementById('sort1');
+let btnsortAntal = document.getElementById('sort2');
+let btnsortFärg = document.getElementById('sort3');
+let btnsortPris = document.getElementById('sort4');
 
 
 	btnAdd.addEventListener('click', function(){
@@ -47,6 +50,40 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	
 	console.log(snapshot.val());
 	});
+	
+	
+	
+	
+	
+	
+	
+	
+// sortering efter produkts namn
+	
+	btnsortNamn.addEventListener('click', function(){	
+	
+	    let db = firebase.database();
+            db.ref('inputInformation/').orderByChild('input1').on('value', function(snapshot) {
+	           snapshot.val();  // VARNING! Behåller inte sorteringen
+	           
+				snapshot.forEach( child => {
+		             let objekt = child.val();// objekten kommer i ordning
+				      console.log (child.val());
+				   
+				     let li = document.createElement('li');
+		
+		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		 
+		           show.appendChild(li);
+	           })
+		 });
+	});	
+		
+	
+	
+	
+
+	
 	
 	
 	
