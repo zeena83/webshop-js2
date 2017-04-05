@@ -80,6 +80,80 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	           })
 		 });
 	});	
+	
+	
+	
+	// sortering efter produkts antal
+	
+	btnsortNamn.addEventListener('click', function(){	
+	    show.style.display ='none';
+	    showshow.style.display = 'inline';
+	      let db = firebase.database();
+            db.ref('inputInformation/').orderByChild('Antal').on('value', function(snapshot) {
+	           snapshot.val();  // VARNING! Behåller inte sorteringen
+	           
+				snapshot.forEach( child => {
+		             let objekt = child.val();// objekten kommer i ordning
+				      console.log (child.val());
+				   
+				     let li = document.createElement('li');
+		
+		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		 
+		           showshow.appendChild(li);
+	           })
+		 });
+	});	
+		
+	
+	
+	
+	
+	// sortering efter produkts färg
+	
+	btnsortNamn.addEventListener('click', function(){	
+	    show.style.display ='none';
+	    showshow.style.display = 'inline';
+	      let db = firebase.database();
+            db.ref('inputInformation/').orderByChild('Färg').on('value', function(snapshot) {
+	           snapshot.val();  // VARNING! Behåller inte sorteringen
+	           
+				snapshot.forEach( child => {
+		             let objekt = child.val();// objekten kommer i ordning
+				      console.log (child.val());
+				   
+				     let li = document.createElement('li');
+		
+		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		 
+		           showshow.appendChild(li);
+	           })
+		 });
+	});	
+		
+	
+	
+	// sortering efter produkts pris
+	
+	btnsortNamn.addEventListener('click', function(){	
+	    show.style.display ='none';
+	    showshow.style.display = 'inline';
+	      let db = firebase.database();
+            db.ref('inputInformation/').orderByChild('Pris').on('value', function(snapshot) {
+	           snapshot.val();  // VARNING! Behåller inte sorteringen
+	           
+				snapshot.forEach( child => {
+		             let objekt = child.val();// objekten kommer i ordning
+				      console.log (child.val());
+				   
+				     let li = document.createElement('li');
+		
+		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		 
+		           showshow.appendChild(li);
+	           })
+		 });
+	});	
 		
 	
 	
