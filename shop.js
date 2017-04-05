@@ -63,7 +63,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	btnsortNamn.addEventListener('click', function(){	
 	
 	    let db = firebase.database();
-            db.ref('inputInformation/').orderByChild('input1').on('value', function(snapshot) {
+            db.ref('inputInformation/').orderByChild('Produkt').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
 	           
 				snapshot.forEach( child => {
