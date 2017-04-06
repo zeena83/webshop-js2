@@ -80,7 +80,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 
                 tr.innerHTML = `
 			<td style="padding:1em;" >${data.Produkt}</td> 
-			<td style="padding:1em;width:85px;" >${data.Antal}</td> 
+			<td style="padding:1em;width:90px;" >${data.Antal}</td> 
 			<td style="padding:1em;width:41px;"  >${data.Färg}</td>
 			<td style="padding:1em;width:55px;" >${data.Pris}</td> 
 			`;
