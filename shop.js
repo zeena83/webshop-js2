@@ -42,7 +42,7 @@ firebase.database().ref('inputInformation/').on('child_added', function(snapshot
                 let data = snapshot.val();
                 addItem(data);
 
-}
+})
 	});
 	
 	
