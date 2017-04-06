@@ -64,7 +64,24 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	
 	
 	
+//cristina
 	
+	
+	function addItem(data) {
+                let items = document.getElementById('items');
+                let tr = document.createElement('tr');
+                tr.style.margin = '1em';
+                tr.style.color = 'black';
+
+                tr.innerHTML = `
+			<td style="padding:1em;" >${data.Produkt}</td> 
+			<td style="padding:1em;" >${data.Antal}</td> 
+			<td style="padding:1em;"  >${data.Färg}</td>
+			<td style="padding:1em;" >${data.Pris}</td> 
+			`;
+                items.appendChild(tr);
+            }
+
 	
 	
 	
