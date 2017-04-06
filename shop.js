@@ -37,6 +37,11 @@ btnAdd.addEventListener('click', function(){
 
 		})
 
+firebase.database().ref('inputInformation/').on('child_added', function(snapshot, prevChildKey) {
+
+                let data = snapshot.val();
+                addItem(data);
+
 
 	});
 	
