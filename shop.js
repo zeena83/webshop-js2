@@ -80,8 +80,8 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 
                 tr.innerHTML = `
 			<td style="padding:1em;" >${data.Produkt}</td> 
-			<td style="padding:1em;width:110px;" >${data.Antal}</td> 
-			<td style="padding:1em;width:60px;"  >${data.Färg}</td>
+			<td style="padding:1em;width:120px;" >${data.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${data.Färg}</td>
 			<td style="padding:1em;width:52px;" >${data.Pris}</td> 
 			`;
                 items.appendChild(tr);
