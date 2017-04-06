@@ -30,9 +30,9 @@ btnAdd.addEventListener('click', function(){
 		show.innerHTML ="";
 		firebase.database().ref('inputInformation/').push({
 			Produkt: inputObject1.value,
-			Antal: inputObject2.value,
+			Antal: Number(inputObject2.value),
 			Färg:inputObject3.value,
-			Pris:inputObject4.value
+			Pris:Number(inputObject4.value)
 			
 
 		})
