@@ -75,7 +75,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	function addItem(data) {
                 let items = document.getElementById('items');
                 let tr = document.createElement('tr');
-                tr.style.margin = '2em';
+                tr.style.margin = '1em';
                 tr.style.color = 'black';
 
                 tr.innerHTML = `
