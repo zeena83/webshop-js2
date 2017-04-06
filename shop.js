@@ -153,7 +153,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	    showshow.style.display = 'inline';
 		showshow.innerHTML = "";
 	      let db = firebase.database();
-            db.ref('inputInformation/').orderByChild('Pris').on('value', function(snapshot) {
+            db.ref('inputInformation/').orderByChild('Pris').once('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
 	           
 				snapshot.forEach( child => {
