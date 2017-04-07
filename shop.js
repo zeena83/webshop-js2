@@ -139,6 +139,12 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				   
 				     //let li = document.createElement('li');
 					let tr = document.createElement('tr');
+					 tr.innerHTML = `
+			<td style="padding:1em;" >${objekt.Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${objekt.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${objekt.Färg}</td>
+			<td style="padding:1em;width:50px;" >${objekt.Pris}</td> 
+			`;
 				
 		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
@@ -167,6 +173,12 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				   
 				     //let li = document.createElement('li');
 					let tr = document.createElement('tr');
+					 tr.innerHTML = `
+			<td style="padding:1em;" >${objekt.Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${objekt.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${objekt.Färg}</td>
+			<td style="padding:1em;width:50px;" >${objekt.Pris}</td> 
+			`;
 					
 		
 		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
@@ -194,6 +206,12 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				   
 				    // let li = document.createElement('li');
 					let tr = document.createElement('tr');
+					 tr.innerHTML = `
+			<td style="padding:1em;" >${objekt.Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${objekt.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${objekt.Färg}</td>
+			<td style="padding:1em;width:50px;" >${objekt.Pris}</td> 
+			`;
 					
 		
 		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
@@ -222,7 +240,12 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
                   console.log(inputInformation.val());
                     //let li= document.createElement('li');
 					let tr = document.createElement('tr');
-					
+					 tr.innerHTML = `
+			<td style="padding:1em;" >${inputInformation.val().Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${inputInformation.val().Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${inputInformation.val().Färg}</td>
+			<td style="padding:1em;width:50px;" >${inputInformation.val().Pris}</td> 
+			`;
                     tr.innerHTML= `Produkt: ${ inputInformation.val().Produkt } Antal:${inputInformation.val().Antal} Färg: ${inputInformation.val().Färg}  pris:${inputInformation.val().Pris}`;
                      items.appendChild(tr);
                       
