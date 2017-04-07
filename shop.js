@@ -107,7 +107,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				   
 				     //let li = document.createElement('li');
 		             let tr = document.createElement('tr');
-					 tr.style.width = '100px';
+					 td.style.width = '100px';
 				     tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
 		           items.appendChild(tr);
@@ -133,7 +133,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				   
 				     //let li = document.createElement('li');
 					let tr = document.createElement('tr');
-					
+					td.style.width = '50px';
 		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
 		           items.appendChild(tr);
