@@ -8,8 +8,8 @@ let inputObject2 = document.getElementById('input2');
 let inputObject3 = document.getElementById('input3');
 let inputObject4 = document.getElementById('input4');
 let btnAdd = document.getElementById('add');
-let showData = document.getElementById('show');
-let showDataShow = document.getElementById('showshow');
+//let showData = document.getElementById('show');
+//let showDataShow = document.getElementById('showshow');
 let btnsortNamn = document.getElementById('sort1');
 let btnsortAntal = document.getElementById('sort2');
 let btnsortFärg = document.getElementById('sort3');
@@ -27,7 +27,7 @@ let btnVisa = document.getElementById('visa');
 //add
 
 btnAdd.addEventListener('click', function(){
-		show.innerHTML ="";
+		items.innerHTML ="";
 		firebase.database().ref('inputInformation/').push({
 			Produkt: inputObject1.value,
 			Antal: Number(inputObject2.value),
@@ -48,7 +48,7 @@ firebase.database().ref('inputInformation/').on('child_added', function(snapshot
 	
 	
 	
-	
+	/*
 	//visa innehållet i database
 	
 firebase.database().ref('inputInformation/').on('value', function(snapshot){
@@ -59,7 +59,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		 li.innerHTML = dataobject[i].Produkt + " ," + dataobject[i].Antal + " , " + dataobject[i].Färg + " , " + dataobject[i].Pris;
 		
 		 //
-		 show.insertBefore(li,show.firstChild);
+		 items.insertBefore(li,show.firstChild);
 		 
 	 }
 		
@@ -67,7 +67,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	console.log(snapshot.val());
 	});
 	
-	
+	*/
 	
 //cristina
 	
@@ -94,9 +94,9 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 // sortering efter produkts namn
 	
 	btnsortNamn.addEventListener('click', function(){	
-	    show.style.display ='none';
-	    showshow.style.display = 'inline';
-	    showshow.innerHTML = "";
+	   // show.style.display ='none';
+	    //showshow.style.display = 'inline';
+	    items.innerHTML = "";
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Produkt').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
@@ -105,11 +105,11 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		             let objekt = child.val();// objekten kommer i ordning
 				      console.log (child.val());
 				   
-				     let li = document.createElement('li');
-		
-		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+				     //let li = document.createElement('li');
+		             let tr = document.createElement('tr');
+		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
-		           showshow.appendChild(li);
+		           items.appendChild(tr);
 	           })
 		 });
 	});	
@@ -119,9 +119,9 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	// sortering efter produkts antal
 	
 	btnsortAntal.addEventListener('click', function(){	
-	    show.style.display ='none';
-	    showshow.style.display = 'inline';
-		showshow.innerHTML = "";
+	   // show.style.display ='none';
+	   // showshow.style.display = 'inline';
+		items.innerHTML = "";
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Antal').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
@@ -130,11 +130,11 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		             let objekt = child.val();// objekten kommer i ordning
 				      console.log (child.val());
 				   
-				     let li = document.createElement('li');
+				     //let li = document.createElement('li');
 		
-		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
-		           showshow.appendChild(li);
+		           items.appendChild(tr);
 	           })
 		 });
 	});	
@@ -146,9 +146,9 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	// sortering efter produkts färg
 	
 	btnsortFärg.addEventListener('click', function(){	
-	    show.style.display ='none';
-	    showshow.style.display = 'inline';
-		showshow.innerHTML = "";
+	    //show.style.display ='none';
+	    //showshow.style.display = 'inline';
+		items.innerHTML = "";
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Färg').on('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
@@ -157,11 +157,12 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		             let objekt = child.val();// objekten kommer i ordning
 				      console.log (child.val());
 				   
-				     let li = document.createElement('li');
+				     //let li = document.createElement('li');
+					let tr = document.createElement('tr');
 		
-		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
-		           showshow.appendChild(li);
+		           items.appendChild(tr);
 	           })
 		 });
 	});	
@@ -171,9 +172,9 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	// sortering efter produkts pris
 	
 	btnsortPris.addEventListener('click', function(){	
-	    show.style.display ='none';
-	    showshow.style.display = 'inline';
-		showshow.innerHTML = "";
+	    //show.style.display ='none';
+	    //showshow.style.display = 'inline';
+		items.innerHTML = "";
 	      let db = firebase.database();
             db.ref('inputInformation/').orderByChild('Pris').once('value', function(snapshot) {
 	           snapshot.val();  // VARNING! Behåller inte sorteringen
@@ -182,11 +183,12 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 		             let objekt = child.val();// objekten kommer i ordning
 				      console.log (child.val());
 				   
-				     let li = document.createElement('li');
+				    // let li = document.createElement('li');
+					let tr = document.createElement('tr');
 		
-		            li.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
-		           showshow.appendChild(li);
+		           items.appendChild(tr);
 	           })
 		 });
 	});	
@@ -197,8 +199,8 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 
 	btnVisa.addEventListener('click',function(event){ 
            
-            show.innerHTML=""; 
-		    show.innerHTML = "";
+            items.innerHTML=""; 
+		    showshow.innerHTML = "";
             
 		    let db = firebase.database();   
             let limit= Number(limitFirst.value);  
@@ -208,9 +210,10 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
                // snapshot.val();  // VARNING! Behåller inte sorteringen
                 snapshot.forEach( inputInformation=>  {
                   console.log(inputInformation.val());
-                    let li= document.createElement('li');
-                    li.innerHTML= `Produkt: ${ inputInformation.val().Produkt } Antal:${inputInformation.val().Antal} Färg: ${inputInformation.val().Färg}  pris:${inputInformation.val().Pris}`;
-                     show.appendChild(li);
+                    //let li= document.createElement('li');
+					let tr = document.createElement('tr');
+                    tr.innerHTML= `Produkt: ${ inputInformation.val().Produkt } Antal:${inputInformation.val().Antal} Färg: ${inputInformation.val().Färg}  pris:${inputInformation.val().Pris}`;
+                     items.appendChild(tr);
                       
 				}) //snapshot 
                    
