@@ -107,6 +107,15 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				   
 				     //let li = document.createElement('li');
 		             let tr = document.createElement('tr');
+					tr.style.margin = '1em';
+                tr.style.color = 'black';
+
+                tr.innerHTML = `
+			<td style="padding:1em;" >${data.Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${data.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${data.Färg}</td>
+			<td style="padding:1em;width:50px;" >${data.Pris}</td> 
+			`;
 		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
 		           items.appendChild(tr);
@@ -131,6 +140,16 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				      console.log (child.val());
 				   
 				     //let li = document.createElement('li');
+					let tr = document.createElement('tr');
+					tr.style.margin = '1em';
+                tr.style.color = 'black';
+
+                tr.innerHTML = `
+			<td style="padding:1em;" >${data.Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${data.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${data.Färg}</td>
+			<td style="padding:1em;width:50px;" >${data.Pris}</td> 
+			`;
 		
 		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
@@ -159,6 +178,15 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				   
 				     //let li = document.createElement('li');
 					let tr = document.createElement('tr');
+					tr.style.margin = '1em';
+                tr.style.color = 'black';
+
+                tr.innerHTML = `
+			<td style="padding:1em;" >${data.Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${data.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${data.Färg}</td>
+			<td style="padding:1em;width:50px;" >${data.Pris}</td> 
+			`;
 		
 		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
@@ -185,6 +213,15 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 				   
 				    // let li = document.createElement('li');
 					let tr = document.createElement('tr');
+					tr.style.margin = '1em';
+                tr.style.color = 'black';
+
+                tr.innerHTML = `
+			<td style="padding:1em;" >${data.Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${data.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${data.Färg}</td>
+			<td style="padding:1em;width:50px;" >${data.Pris}</td> 
+			`;
 		
 		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
@@ -200,7 +237,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	btnVisa.addEventListener('click',function(event){ 
            
             items.innerHTML=""; 
-		    showshow.innerHTML = "";
+		    //showshow.innerHTML = "";
             
 		    let db = firebase.database();   
             let limit= Number(limitFirst.value);  
@@ -212,6 +249,15 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
                   console.log(inputInformation.val());
                     //let li= document.createElement('li');
 					let tr = document.createElement('tr');
+					tr.style.margin = '1em';
+                tr.style.color = 'black';
+
+                tr.innerHTML = `
+			<td style="padding:1em;" >${data.Produkt}</td> 
+			<td style="padding:1em;width:92px;" >${data.Antal}</td> 
+			<td style="padding:1em;width:90px;"  >${data.Färg}</td>
+			<td style="padding:1em;width:50px;" >${data.Pris}</td> 
+			`;
                     tr.innerHTML= `Produkt: ${ inputInformation.val().Produkt } Antal:${inputInformation.val().Antal} Färg: ${inputInformation.val().Färg}  pris:${inputInformation.val().Pris}`;
                      items.appendChild(tr);
                       
