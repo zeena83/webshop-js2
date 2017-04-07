@@ -146,7 +146,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 			<td style="padding:1em;width:50px;" >${objekt.Pris}</td> 
 			`;
 				
-		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		           // tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
 		           items.appendChild(tr);
 	           })
@@ -181,7 +181,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 			`;
 					
 		
-		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		            //tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
 		           items.appendChild(tr);
 	           })
@@ -214,7 +214,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 			`;
 					
 		
-		            tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
+		            //tr.innerHTML = objekt.Produkt + " , " + objekt.Antal + " , " + objekt.Färg + " , " + objekt.Pris;
 		 
 		           items.appendChild(tr);
 	           })
@@ -246,7 +246,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 			<td style="padding:1em;width:90px;"  >${inputInformation.val().Färg}</td>
 			<td style="padding:1em;width:50px;" >${inputInformation.val().Pris}</td> 
 			`;
-                    tr.innerHTML= `Produkt: ${ inputInformation.val().Produkt } Antal:${inputInformation.val().Antal} Färg: ${inputInformation.val().Färg}  pris:${inputInformation.val().Pris}`;
+                   // tr.innerHTML= `Produkt: ${ inputInformation.val().Produkt } Antal:${inputInformation.val().Antal} Färg: ${inputInformation.val().Färg}  pris:${inputInformation.val().Pris}`;
                      items.appendChild(tr);
                       
 				}) //snapshot 
