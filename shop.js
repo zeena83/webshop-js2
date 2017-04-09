@@ -69,7 +69,7 @@ firebase.database().ref('inputInformation/').on('value', function(snapshot){
 	
 	*/
 	
-//cristina
+//Lista
 	
 	
 	function addItem(data) {

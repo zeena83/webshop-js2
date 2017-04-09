@@ -36,7 +36,17 @@
 	
 	<div class="container">
 		
-		<form>
+		<div class="div">
+		
+		  <h1 style="text-align: center; color: green; padding-top: 30px; font-style: italic; font-weight: bold;">Välkommen och titta in i vår webbshop</h1>
+			<p style="text-align: center; color: black; font-size:20px; padding-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tum Piso: Quoniam igitur aliquid omnes, quid Lucius noster? Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Positum est a nostris in iis esse rebus, quae secundum naturam essent, non dolere; Vestri haec verecundius, illi fortasse constantius. Sed plane dicit quod intellegit. Dat enim intervalla et relaxat. Duo Reges: constructio interrete. Aliter enim nosmet ipsos nosse non possumus.
+</p>
+		
+		</div>
+		
+		
+		<form style="color:black;">
+			<h3 style="font-style: italic; font-weight: bold; color:black;">Lägga till produkter:</h3> <br>
 	      <div class="col-xs-2">
               <label for="ex1">Produkt</label>
               <input class="form-control" id="input1" type="text">
@@ -59,26 +69,33 @@
 			
 		 </form>
 		<br>
-		 <button type="button" class="btn btn-success" id="add">Add</button>
+		 <button style="color:white; position:relative; top:5px;" type="button" class="btn btn-success" id="add">Add</button>
 		
 		<br><br><br><br>
-		<button type="button" class="btn btn-success" id="sort1">Sortera efter produkts namn</button> 
-		<button type="button" class="btn btn-success" id="sort2">Sortera efter antal</button> 
-		<button type="button" class="btn btn-success" id="sort3">Sortera efter färg</button> 
-		<button type="button" class="btn btn-success" id="sort4">Sortera efter pris</button> 
+		<h3 style="font-style: italic; font-weight: bold; color:black;"> Sortera produkter:</h3> <br>
+		<button style="color:white;" type="button" class="btn btn-success" id="sort1">Sortera efter produkts namn</button> 
+		<button style="color:white;" type="button" class="btn btn-success" id="sort2">Sortera efter antal</button> 
+		<button style="color:white;" type="button" class="btn btn-success" id="sort3">Sortera efter färg</button> 
+		<button style="color:white;" type="button" class="btn btn-success" id="sort4">Sortera efter pris</button> 
 		
 		<br><br><br><br>
 		
 			   <div class="col-xs-">
-                  <label id="label" style="color: white; font-size:25px;" for="ex2">limitToFirst(limit):</label>
-                  <input class="form-control" placeholder="limitToFirst(limit)" id="ex2" type="text">
-				   <button type="button" class="btn btn-success" id="visa">Visa</button> 
+				   <h3 style="font-style: italic; font-weight: bold; color:black;">Välj antal objekt att visa i listan:</h3>
+                  <label id="label" style="color: white; font-size:25px;" for="ex2"></label>
+                  <input class="form-control" style="width:30%;" placeholder="limitToFirst(limit)" id="ex2" type="text">
+				   
+				   
                </div>
+		     
+		        <button style="color:white; position:relative; left:357px; bottom:33px;
+" type="button" class="btn btn-success" id="visa">Visa</button> 
+		<h3 style="font-style: italic; font-weight: bold; color:black;"> Lista:</h3>
 		
-		 <table cellspacing=12 style="margin:0.6em; padding:0.6em; width:400px; border-radius:4px;">
+		 <table cellspacing=12 style="margin:0.6em; padding:0.6em; width:400px; border-radius:4px; background-color: white; color:black;">
 
                         <tr>
-                            <th>Produkt</th>
+                            <th style="padding:1em;">Produkt</th>
                             <th style="text-align:center; padding:1em; width:133px;">Antal</th>
                             <th style="text-align:right; padding:1em; width:44px;">Färg</th>
                             <th style="text-align:right; padding:1em; width:90px;">Pris</th>
@@ -86,7 +103,7 @@
 
          </table>
 		
-		<table id="items" cellspacing=12 style="width:400px; margin:0.6em; padding:0.6em; "></table>
+		<table id="items" cellspacing=12 style="width:400px; margin:0.6em; padding:0.6em; background-color: white; color:black;"></table>
 
 
 
